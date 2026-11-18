@@ -97,4 +97,4 @@ Claude (Anthropic) assisted with writing and debugging the code, running and sum
 
 ## Licence and citation
 
-To be decided before the repository is made public. Until then, all rights are reserved.
+Code: MIT licence (see `LICENSE`). The data files keep the terms of their original sources (table above). If you use this code, please cite the paper; a citation entry will be added when it is on arXiv.
