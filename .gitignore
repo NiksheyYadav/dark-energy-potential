@@ -1,5 +1,6 @@
-# Private working notebook (kept local)
+# Private working notes (kept local)
 REPORT.md
+paper/SUBMISSION_GUIDE.md
 
 # Third-party data fetched by data/fetch_data.py, and the cache built from it
 data/Pantheon+SH0ES.dat
