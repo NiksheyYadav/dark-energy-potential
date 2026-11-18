@@ -1,0 +1,60 @@
+C:\physics-research\src\neural_potential.py:96: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  hist.append((it, float(chi[0]), float(chi.median())))
+it    0  chi2[real]=1464.848  median chi2=3034.782  h[real]=0.6577  (1s)
+it  100  chi2[real]=1401.577  median chi2=3015.843  h[real]=0.6767  (89s)
+it  200  chi2[real]=1401.209  median chi2=3015.296  h[real]=0.6771  (185s)
+it  300  chi2[real]=1401.071  median chi2=3017.524  h[real]=0.6777  (285s)
+it  400  chi2[real]=1401.186  median chi2=3015.465  h[real]=0.6772  (374s)
+it  500  chi2[real]=1400.986  median chi2=3016.118  h[real]=0.6778  (462s)
+it  600  chi2[real]=1400.912  median chi2=3013.975  h[real]=0.6778  (552s)
+it  700  chi2[real]=1400.800  median chi2=3013.880  h[real]=0.6779  (643s)
+it  800  chi2[real]=1400.694  median chi2=3015.472  h[real]=0.6779  (735s)
+it  900  chi2[real]=1400.634  median chi2=3013.400  h[real]=0.6781  (825s)
+it 1000  chi2[real]=1400.598  median chi2=3013.280  h[real]=0.6779  (914s)
+{
+ "tag": "nn_planck_eps",
+ "B": 24,
+ "iters": 1000,
+ "runtime_s": 914.4337368011475,
+ "real": {
+  "chi2_cc": 6.479682465866586,
+  "chi2_bao": 8.09957722116497,
+  "chi2_sn": 1386.0189909264445,
+  "chi2_prior": 8.226227663240253e-06,
+  "chi2_total": 1400.5982588397037,
+  "H0": 67.79472521765906,
+  "Om": 0.2994909427915886,
+  "w0": -0.9512256538602534,
+  "dphi": 0.2564968299338058,
+  "eps_H0": 4.88217403651659e-05
+ },
+ "ensemble_16_50_84": {
+  "H0": [
+   66.93429980058923,
+   67.2566160948596,
+   67.76225812451516
+  ],
+  "Om": [
+   0.2890488403908399,
+   0.29928543111668526,
+   0.3098205987340393
+  ],
+  "w0": [
+   -0.9634601108319224,
+   -0.8477339622286724,
+   -0.553832923881242
+  ],
+  "dphi": [
+   0.16141149116490783,
+   0.23266208382863088,
+   0.3129686073132611
+  ],
+  "eps_H0": [
+   7.412860922090345e-06,
+   4.585615606900781e-05,
+   0.00014312447704918158
+  ]
+ },
+ "n_params_per_member": 324
+}

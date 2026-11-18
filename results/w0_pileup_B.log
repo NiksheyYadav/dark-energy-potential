@@ -1,0 +1,12 @@
+mock 0: 2000 samples, tau 203 steps, 557 s; w0 16/50/84 [-1.     -0.9992 -0.9946]; truth -0.9864 at quantile 0.90
+  pile w0<-0.995   83%: c2>0  98%, median c2  +18.8, lam 1.14, |dphi| 0.060, slope today/initial -0.00 (<0.5 in 97%)
+  rest             17%: c2>0  52%, median c2   +0.4, lam 0.48, |dphi| 0.129, slope today/initial +0.89 (<0.5 in 41%)
+  rank correlation with w0: c2 -0.48, lam +0.21
+mock 1: 2000 samples, tau 374 steps, 558 s; w0 16/50/84 [-1.     -0.9991 -0.9918]; truth -0.9864 at quantile 0.88
+  pile w0<-0.995   78%: c2>0  97%, median c2  +16.5, lam 1.18, |dphi| 0.064, slope today/initial -0.05 (<0.5 in 97%)
+  rest             22%: c2>0  76%, median c2   +5.6, lam 1.44, |dphi| 0.187, slope today/initial -0.02 (<0.5 in 72%)
+  rank correlation with w0: c2 -0.54, lam +0.34
+mock 2: 2000 samples, tau 209 steps, 557 s; w0 16/50/84 [-1.     -0.9992 -0.9935]; truth -0.9864 at quantile 0.89
+  pile w0<-0.995   81%: c2>0  98%, median c2  +17.8, lam 1.06, |dphi| 0.060, slope today/initial -0.02 (<0.5 in 97%)
+  rest             19%: c2>0  67%, median c2   +3.1, lam 0.76, |dphi| 0.148, slope today/initial +0.29 (<0.5 in 59%)
+  rank correlation with w0: c2 -0.53, lam +0.27

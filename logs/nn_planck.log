@@ -1,0 +1,60 @@
+C:\physics-research\src\neural_potential.py:96: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  hist.append((it, float(chi[0]), float(chi.median())))
+it    0  chi2[real]=1464.936  median chi2=3034.839  h[real]=0.6577  (1s)
+it  100  chi2[real]=1401.569  median chi2=3016.518  h[real]=0.6793  (88s)
+it  200  chi2[real]=1401.189  median chi2=3015.299  h[real]=0.6787  (184s)
+it  300  chi2[real]=1401.100  median chi2=3015.115  h[real]=0.6779  (283s)
+it  400  chi2[real]=1401.038  median chi2=3019.310  h[real]=0.6777  (371s)
+it  500  chi2[real]=1401.039  median chi2=3015.955  h[real]=0.6774  (460s)
+it  600  chi2[real]=1400.908  median chi2=3014.533  h[real]=0.6776  (548s)
+it  700  chi2[real]=1400.996  median chi2=3015.506  h[real]=0.6789  (638s)
+it  800  chi2[real]=1400.887  median chi2=3013.784  h[real]=0.6785  (729s)
+it  900  chi2[real]=1400.786  median chi2=3013.584  h[real]=0.6779  (819s)
+it 1000  chi2[real]=1400.766  median chi2=3013.466  h[real]=0.6779  (908s)
+{
+ "tag": "nn_planck",
+ "B": 24,
+ "iters": 1000,
+ "runtime_s": 908.7371530532837,
+ "real": {
+  "chi2_cc": 6.463969761943519,
+  "chi2_bao": 8.284107018318252,
+  "chi2_sn": 1386.018294043839,
+  "chi2_prior": 7.657633438220557e-06,
+  "chi2_total": 1400.7663784817341,
+  "H0": 67.78971931782704,
+  "Om": 0.3016947749312105,
+  "w0": -0.9519533080076424,
+  "dphi": 0.24457939898139464,
+  "eps_H0": 0.0
+ },
+ "ensemble_16_50_84": {
+  "H0": [
+   66.92905069340327,
+   67.39972853124132,
+   67.89573142252408
+  ],
+  "Om": [
+   0.2893250840063119,
+   0.3016404396060122,
+   0.31216997670615604
+  ],
+  "w0": [
+   -0.9714244200474558,
+   -0.8682010786890514,
+   -0.6383337939657098
+  ],
+  "dphi": [
+   0.1511685631339405,
+   0.24255289914769967,
+   0.3064015503195714
+  ],
+  "eps_H0": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "n_params_per_member": 323
+}

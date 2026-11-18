@@ -1,0 +1,65 @@
+C:\physics-research\src\neural_potential.py:96: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  hist.append((it, float(chi[0]), float(chi.median())))
+it    0  chi2[real]=1624.743  median chi2=3311.568  h[real]=0.6577  (1s)
+it  100  chi2[real]=1599.245  median chi2=3216.671  h[real]=0.6324  (88s)
+it  200  chi2[real]=1598.842  median chi2=3216.627  h[real]=0.6335  (184s)
+it  300  chi2[real]=1598.206  median chi2=3214.937  h[real]=0.6327  (283s)
+it  400  chi2[real]=1597.735  median chi2=3215.408  h[real]=0.6323  (371s)
+it  500  chi2[real]=1597.437  median chi2=3214.853  h[real]=0.6338  (459s)
+it  600  chi2[real]=1596.691  median chi2=3214.602  h[real]=0.6326  (547s)
+it  700  chi2[real]=1596.264  median chi2=3214.540  h[real]=0.6321  (636s)
+it  800  chi2[real]=1595.681  median chi2=3214.378  h[real]=0.6317  (727s)
+it  900  chi2[real]=1594.937  median chi2=3214.292  h[real]=0.6318  (817s)
+it 1000  chi2[real]=1594.290  median chi2=3214.229  h[real]=0.6317  (906s)
+{
+ "tag": "nn_planck_mock",
+ "B": 24,
+ "iters": 1000,
+ "runtime_s": 906.1758160591125,
+ "real": {
+  "chi2_cc": 7.038911610869159,
+  "chi2_bao": 24.889303154633225,
+  "chi2_sn": 1562.361965149641,
+  "chi2_prior": 3.0159086578318852e-05,
+  "chi2_total": 1594.2902100742301,
+  "H0": 63.16996944007849,
+  "Om": 0.33094208765818495,
+  "w0": -0.7392933659889299,
+  "dphi": 0.47920937964216503,
+  "eps_H0": 0.0
+ },
+ "ensemble_16_50_84": {
+  "H0": [
+   62.532767843437014,
+   63.20986170062515,
+   63.55966582569122
+  ],
+  "Om": [
+   0.31252244258359946,
+   0.3385964491183473,
+   0.35513688410935
+  ],
+  "w0": [
+   -0.8575094561544812,
+   -0.7935997717544263,
+   -0.6683083992221279
+  ],
+  "dphi": [
+   0.26166591854953636,
+   0.42118459594760604,
+   0.5496295098619322
+  ],
+  "eps_H0": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ },
+ "n_params_per_member": 323,
+ "truth": {
+  "lam": 1.0,
+  "H0": 63.757245097908424,
+  "w0": NaN
+ }
+}

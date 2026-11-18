@@ -1,0 +1,19 @@
+# Private working notebook (kept local)
+REPORT.md
+
+# Third-party data fetched by data/fetch_data.py, and the cache built from it
+data/Pantheon+SH0ES.dat
+data/Pantheon+SH0ES_STAT+SYS.cov
+data/pantheon_plus_cache.npz
+
+# Large run outputs (chains, ensembles, mocks); summaries (.json, .md, .log) are kept
+results/*.npz
+
+# Paper build products
+paper/build/
+paper/overleaf.zip
+paper/main.pdf
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
