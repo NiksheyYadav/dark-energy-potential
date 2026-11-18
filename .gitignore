@@ -12,6 +12,7 @@ results/*.npz
 # Paper build products
 paper/build/
 paper/overleaf.zip
+paper/arxiv.zip
 paper/main.pdf
 
 __pycache__/
