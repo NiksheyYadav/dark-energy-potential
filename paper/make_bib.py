@@ -10,7 +10,7 @@ IDS = """2607.22126 2305.06392 2112.00822 2609.21912 2511.06924 2509.13373 2205.
 0805.1726 1002.4928 gr-qc/9211002 1104.0819 hep-ph/0611184 1807.06209 2112.04510 2112.03863 2202.04077
 2003.07362 2201.07241 2001.04385 1806.07366 2305.01582 1202.3665 1910.13970 astro-ph/0307285
 astro-ph/0506696 astro-ph/0610812 astro-ph/0611093 astro-ph/0610427 2101.04666 astro-ph/0505158 astro-ph/0207517
-1004.0236 2505.10662 2405.17396 2404.14341 2608.13488""".split()
+1004.0236 2505.10662 2405.17396 2404.14341 2608.13488 2310.07482 2506.13047 2506.21542""".split()
 
 # Pre-arXiv classics, checked against Crossref (title, author, journal, volume, page) on 2026-11-18.
 MANUAL = r"""
@@ -38,7 +38,7 @@ def esc(s):
 out, fail = [], []
 for i in range(0, len(IDS), 40):
     chunk = IDS[i:i + 40]
-    url = "http://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
+    url = "https://export.arxiv.org/api/query?max_results=100&id_list=" + ",".join(chunk)
     root = ET.fromstring(urllib.request.urlopen(url, timeout=60).read())
     got = {}
     for e in root.findall("a:entry", NS):

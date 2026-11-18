@@ -27,7 +27,7 @@ Recent model-independent reconstructions of the quintessence potential different
 The DESI DR2 baryon-acoustic-oscillation (BAO) measurements~\cite{2503.14738}, combined with supernovae, have renewed interest in dynamical dark energy. In particular, they have revived interest in thawing quintessence, a scalar field held by Hubble friction until recently.
 The natural theoretical target is the potential $V(\phi)$, and there are two ways to reconstruct it.
 \begin{itemize}
-\item \emph{Direct reconstruction} places a parametrised $V$ inside the field equations and fits the data with the resulting solutions. Examples are Taylor and Pad\'e expansions with the order chosen by an information criterion~\cite{astro-ph_0506696,astro-ph_0610812}, a binned potential~\cite{astro-ph_0611093}, polynomial potentials evolved with flow equations~\cite{astro-ph_0610427}, and an effective-field-theory reconstruction in time from which $V(\Delta\phi)$ follows~\cite{2101.04666}. Recent fits of linear, quadratic and exponential potentials to DESI data are of this kind~\cite{2505.10662,2405.17396,2404.14341}.
+\item \emph{Direct reconstruction} places a parametrised $V$ inside the field equations and fits the data with the resulting solutions. Examples are Taylor and Pad\'e expansions with the order chosen by an information criterion~\cite{astro-ph_0506696,astro-ph_0610812}, a binned potential~\cite{astro-ph_0611093}, polynomial potentials evolved with flow equations~\cite{astro-ph_0610427}, and an effective-field-theory reconstruction in time from which $V(\Delta\phi)$ follows~\cite{2101.04666}. Recent fits of linear, quadratic and exponential potentials to DESI data are of this kind~\cite{2505.10662,2405.17396,2404.14341,2506.13047,2506.21542}.
 \item \emph{Regression and inversion} regresses $H(z)$ with a Gaussian process~\cite{2203.06767,2112.09722,2305.04752,2603.21125,2604.04056,2608.24433,2411.00051} or a neural network~\cite{2305.15500}, then inverts the Friedmann and Klein--Gordon equations. The inversion needs $H'$, and for the slope of $V$ also $H''$. Derivatives of a regressed curve are dominated by the kernel or architecture, and $\dot\phi^2$, a difference of noisy terms, can come out negative~\cite{2603.21125}.
 \end{itemize}
 Most recent ``model-independent'' work, including the machine-learning reconstructions, follows the second route. Direct reconstructions have used low-order expansions or bins in $\phi$, or splines in time.
@@ -52,8 +52,7 @@ We also let gravity deviate from general relativity (GR) by the quadratic terms 
 \item \emph{What current background data measure about $V(\phi)$.} From an exact function-space Fisher matrix, chronometers, DESI DR2 BAO and Pantheon+ are sensitive to the height and slope of $\ln V$ only, because the field moves by $0.25\,\Mpl$. A 321-parameter potential improves $\chi^2$ by only 0.4 over an exponential. This agrees with the finding that a quadratic term improves a linear-potential fit to DES-SN5YR and DESI DR2 by $\Delta\chi^2<1$~\cite{2505.10662}, and quantifies it.
 \item \emph{Calibrated uncertainties.} A coverage test, on 50 mocks at each of two truths, of the bootstrap ensemble against MCMC posteriors.
 \item \emph{Quadratic gravity as a competing deformation.} The order-reduced correction to all orders, which is a divergent series that limits any $\epsilon$ bound to order of magnitude, a test against the full third-order equation, and the degeneracy between $\epsilon$ and the shape of $V$.
-\item \emph{A free-form direct reconstruction:} a neural $V(\phi)$ inside a differentiable solver. We are not aware of a previous late-time quintessence reconstruction with a neural potential inside the solver. \todo{rerun \texttt{paper/citation\_trail.py} before submission.}
-\end{enumerate}
+\item \emph{A free-form direct reconstruction:} a neural $V(\phi)$ inside a differentiable solver. We are not aware of a previous late-time quintessence reconstruction with a neural potential inside the solver.\end{enumerate}
 
 %=====================================================================
 \section{Theory}\label{sec:theory}
@@ -295,7 +294,7 @@ The 6-mode Fisher matrix has eigen-errors 0.0044, 0.023, 0.051, 0.094, 0.19 and 
 By this criterion the data measure the height and the slope. The slope error is stable at $0.18\,\Mpl^{-1}$ as freedom is added. A curvature would have to exceed $|V''/V|\approx9\,\Mpl^{-2}$ to be seen at $1\sigma$, an order of magnitude beyond the values of order unity typical of thawing models. Any feature beyond a straight line in a reconstructed $\ln V(\phi)$ therefore comes from the prior, the kernel or the initialisation.
 
 Two remarks on the slope. First, $\sigma=0.18$ is a local error at $\lambda=0.82$, while the preference for a non-zero slope is only $\Delta\chi^2=-4.9$, about $2.2\sigma$. The two agree because near $\lambda=0$ the observables respond to $\lambda^2$, since $1+w\propto\lambda^2$ at leading order~\cite{2608.13488}. The significance of $\lambda\neq0$ is then about $\lambda/(2\sigma_\lambda)\approx2.3$.
-Second, Park et al.\ find four to five constrained quintessence parameters~\cite{2101.04666}. Their count is for the EFT function $\Delta\Lambda(a)$ on a spline in time, measured against a correlation prior, with CMB, CMB-lensing, BAO, galaxy and supernova data. Ours is a local Fisher count for $\ln V(\phi)$ with background data only. The two counts answer different questions and do not conflict.
+Second, Park et al.\ find four to five constrained quintessence parameters~\cite{2101.04666}. Their count is for the EFT function $\Delta\Lambda(a)$ on a spline in time, measured against a correlation prior, with CMB, CMB-lensing, BAO, galaxy and supernova data. Ours is a local Fisher count for $\ln V(\phi)$ with background data only. The two counts answer different questions and do not conflict. Our count also makes concrete, for background data and $\ln V(\phi)$, the underdetermination of dark-energy microphysics argued in Ref.~\cite{2310.07482}.
 
 Conversely, the bound on $\epsilon$ weakens twenty-fold as $V$ is freed and becomes fully degenerate with $\omega_m$. Quadratic-gravity bounds quoted with $\Lambda$ fixed are conditional on $\Lambda$.
 
@@ -424,12 +423,8 @@ On mocks at two truths the bootstrap ensemble's intervals are about as well cali
 
 A quadratic-gravity correction, of which only $\alpha+\beta/3$ is observable, is not detected. Its bound is conditional on $\Lambda$ and degenerates with $\omega_m$ when $V$ is free. At the bound, the order-reduced description is accurate only to order of magnitude. None of the models eases the $H_0$ tension.
 
-\paragraph{Code and data availability.} All code, data-loading scripts and result summaries are available at \url{https://github.com/NiksheyYadav/dark-energy-potential}. \todo{make the repository public and tag the submitted version.}
-
-\paragraph{Use of AI tools.} Claude (Anthropic), a large language model, assisted with writing and debugging the analysis code, running and summarising the numerical experiments, checking references and drafting the text. The author directed the study, checked the derivations, code and results, and takes full responsibility for the content. \todo{confirm this statement matches your contribution, and check the journal's AI policy.}
-
-\paragraph{Acknowledgments.} \todo{anyone you wish to thank, or delete this paragraph.}
-
+\paragraph{Code and data availability.} All code, data-loading scripts and result summaries are available at \url{https://github.com/NiksheyYadav/dark-energy-potential}.
+\paragraph{Use of AI tools.} Claude (Anthropic), a large language model, assisted with writing and debugging the analysis code, running and summarising the numerical experiments, checking references and drafting the text. The author directed the study, checked the derivations, code and results, and takes full responsibility for the content.
 \bibliographystyle{unsrtnat}
 \bibliography{refs}
 
