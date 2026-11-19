@@ -15,8 +15,11 @@ if arxiv:
     todos = re.findall(r"\\todo\{", tex)
     if todos:
         print(f"warning: {len(todos)} \\todo markers are still in main.tex")
-    if not os.path.exists(os.path.join("build", "main.bbl")):
-        raise SystemExit("build/main.bbl missing: compile the paper first")
+    bbl = os.path.join("build", "main.bbl")
+    if not os.path.exists(bbl):
+        raise SystemExit("build/main.bbl missing: compile with tectonic --keep-intermediates first")
+    if os.path.getmtime(bbl) < max(os.path.getmtime("main.tex"), os.path.getmtime("refs.bib")):
+        raise SystemExit("build/main.bbl is older than main.tex or refs.bib: recompile with --keep-intermediates")
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.write("main.tex")
     if arxiv:
