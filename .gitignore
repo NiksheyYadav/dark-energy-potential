@@ -19,3 +19,6 @@ paper/main.pdf
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# Private reviews of other papers (kept local)
+reviews/
